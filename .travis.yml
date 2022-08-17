@@ -7,13 +7,3 @@ install:
 script:
   - mkdocs build --clean
   - mkdocs build
-after_success:  |
-  if [ -n "$REPO_TOKEN" ]; then
-    cd "$TRAVIS_BUILD_DIR"
-    cd site
-    git init
-    git add .
-    git -c user.name=$GITHUB_NAME commit -m "Auto Deployment"
-    git push -f -q https://$GITHUB_NAME:$REPO_TOKEN@$REPO master:gh-pages
-    cd "$TRAVIS_BUILD_DIR"
-  fi
