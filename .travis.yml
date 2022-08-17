@@ -1,9 +1,5 @@
 language: python
-python:
-  - "3.9"
+python:   # 指定运行环境，这里会分别在 2.7 和 3.5 运行
+  - '3.9'
 install:
-  - pip install mkdocs
-  - pip install python-markdown-math
-script:
-  - mkdocs build --clean
-  - mkdocs build
+  - pip install -r requirements.txt   # 安装依赖
