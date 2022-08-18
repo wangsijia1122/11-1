@@ -30,4 +30,4 @@ after_script:
   - git config user.email "${GITHUB_EMAIL}"
   - git add .
   - git commit -m "Update docs"
-  - git push --force --quiet "https://${REPO_TOkEN}@${GH_REF}" master:master
+  - git push --force --quiet "https://${REPO_TOkEN}@${GH_REF}" main:main
