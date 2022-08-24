@@ -1,5 +1,6 @@
-language: python
-python:
-  - '3.9'
-install:
-  - pip install python 3.9
+language: nodejs
+before_script:
+  - npm install
+  
+script:
+  - npm text
